@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue basics</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  
+</head>
+<body>
+    <div id="app">
+        {{ product }} is in the stock.
+        <br>
+        <span v-bind:title="message">
+            Hover on this message and you will see the title.
+        </span>
+        <br>
+        <span> Message 1 is {{ message1 }} </span>
+        <br>
+        <span> Reversed Message 1 is {{ reversedMessage1 }} </span>
+        <br>
+        <input type="text" v-model="newMessage" />&nbsp;<button v-on:click="changeMessage()"> Change Message1 </button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

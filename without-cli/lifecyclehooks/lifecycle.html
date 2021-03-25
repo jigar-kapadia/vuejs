@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Cycle Hooks</title>
+    <style>
+      body {
+        padding-top: 5rem;
+      }
+      .starter-template {
+        /* padding: 3rem 1.5rem; */
+        text-align: center;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container app">
+      <br />
+      <div class="starter-template">
+        <h1>{{ message }}</h1>
+        <p class="lead">
+          Press "F12" to check the events logged. <br />          
+        </p>
+
+        <!-- <div class="main-container">
+            <div class="hook" v-for="(item, index) in hooks" :key="index">
+                <h3>{{ item.name }} </h3>
+            </div>
+        </div> -->
+
+        <div class="card" v-for="(item, index) in hooks" :key="index">
+            <div class="card-header">
+                <h3>{{ item.name }} ( {{ item.short_desc }}) </h3>
+            </div>
+            <div class="card-body">
+                
+              <h5 class="card-title">Explanation</h5>
+              <p class="card-text">{{item.long_desc}}</p>
+              <br>
+              <h5 class="card-title">Usecase</h5>
+              <p class="card-text">{{item.usecase}}</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <script src="lifecycle.js"></script>
+  </body>
+</html>
